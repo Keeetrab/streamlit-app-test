@@ -16,12 +16,14 @@ def calculate_rfm(data):
     }).reset_index()
 
     rfm.columns = ['CustomerID', 'Recency', 'Frequency', 'Monetary']
+    #remove the negative monetary values
+    rfm = rfm[rfm['Monetary'] >= 0]
 
     return rfm
 
 def normalize_data(data):
     scaler = StandardScaler()
-    rfm_scaled = scaler.fit_transform(rfm[['Recency', 'Frequency', 'Monetary']])
+    rfm_scaled = scaler.fit_transform(data[['Recency', 'Frequency', 'Monetary']])
 
     print(rfm_scaled[:5])
     return rfm_scaled
