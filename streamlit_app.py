@@ -16,7 +16,7 @@ from rfm import calculate_rfm, normalize_data
 
 # Show the page title and description.
 st.set_page_config(page_title="Retail Segmentation test", page_icon="🎬")
-st.title("Retail Segmentation test")
+st.title("Retail Segmentation Case")
 st.write(
     """
     Sample Retail Segmentation Case using database from UC Irvine Machine Learning Repository
