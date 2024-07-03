@@ -93,6 +93,39 @@ st.pyplot(fig)
 st.pyplot(transaction_pie_chart(rfm_cleaned))
 st.pyplot(monetary_pie_chart(rfm_cleaned))
 
+st.subheader("Cluster Analysis and Interpretation")
+st.write('''
+Cluster 0: Inactive / Low-value
+
+Characteristics: High Recency (mean: 265.6), low Frequency (mean: 26.7), low Monetary value (mean: 395,6).
+Interpretation: These customers have not purchased recently, buy infrequently, and spend less money. They could be categorized as "inactive" or "low-value" customers.
+Strategy: Reactivate these customers through targeted promotions and discounts.
+         
+
+Cluster 1: Active Customers
+         
+Characteristics: Moderate Recency (mean: 65.5), moderate Frequency (mean: 58.8), moderate Monetary value (mean: 976,3).
+Interpretation: These customers purchase relatively frequently and have a decent spending amount. They can be seen as "active" customers.
+Strategy: Engage these customers with loyalty programs and personalized offers to maintain and increase their activity.
+
+         
+Cluster 2: Very High Value / Super VIP / Enterprise Clients
+
+Characteristics: Low Recency (mean: 32.9), high Frequency (mean: 264.6), very high Monetary value (mean: 14633,1).
+Interpretation: These customers are recent, frequent, and have very high spending. They are the most valuable customers, possibly "super VIPs".
+Strategy: Offer top-tier loyalty programs, personalized experiences, and high-touch customer service to ensure their continued loyalty.
+
+
+Cluster 3: High Value / VIP Customers / Small Business Clients
+         
+Characteristics: Low Recency (mean: 39.9), very high Frequency (mean: 325.1), high Monetary value (mean: 4005.5).
+Interpretation: These are recent, frequent buyers with high spending. They are likely the "high-value" or "Small Business" customers.
+Strategy: Provide exclusive benefits, early access to new products, and premium services to retain these valuable customers.
+
+         
+''')
+
+
 
 # ______Training Model________
 
