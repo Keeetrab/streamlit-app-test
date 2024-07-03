@@ -10,7 +10,8 @@ def clean_data(data):
     data['Amount'] = data['Quantity'] * data['UnitPrice']
 
     # Separate 'InvoiceDate' into 'Date' and 'Time'
-    data['InvoiceDate'] = pd.to_datetime(data['InvoiceDate'])
+    date_format = '%m/%d/%y %H:%M'
+    data['InvoiceDate'] = pd.to_datetime(data['InvoiceDate'], format=date_format, errors='coerce')
     data['Date'] = data['InvoiceDate'].dt.date
     data['Time'] = data['InvoiceDate'].dt.time
 
